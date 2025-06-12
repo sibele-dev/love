@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- CONFIGURAÇÕES ---
   // A data de início do amor de vocês. Altere para a sua data!
   const startDate = new Date("2024-07-13T22:00:00");
-  const texto1 = "Zelda: Link... mesmo sem dizer uma palavra, você me mostra o amor mais sincero.";
+  const texto1 = "Sibele: Mailson... mesmo sem dizer uma palavra, você me mostra o amor mais sincero.";
   const texto2 = "[Você recebeu:] Um coração inteiro. Use com cuidado. É o meu. 💚";
   const textoFinal = "Meu amor, eu agradeço para sempre o dia que lhe conheci!";
   // Se você tinha 'poeminja' e não quer mais, pode remover esta linha:
