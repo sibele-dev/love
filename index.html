@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>A Link to My Heart 💚</title>
+</head>
+<body>
+
+  <main class="content-container">
+    <img class="character-image" src="zelda-link.png" alt="Personagens Link e Zelda do jogo The Legend of Zelda se abraçando.">
+
+    <div class="message-box">
+      <h1>Feliz dia dos namorados, meu amor</h1>
+      
+      <button type="button" class="start-button">Start 💚</button>
+      
+      <div id="dialogos" class="dialog-area hidden">
+        <p class="dialogo" id="fala1"></p>
+        <p class="dialogo" id="fala2"></p>
+      </div>
+      
+      <div class="counter-container hidden">
+        <p class="counter-label">Você é meu amor há:</p>
+        <div id="counter">Carregando amor...</div>
+      </div>
+      
+      <div class="final-message-container hidden">
+        <button type="button" class="heart-button" aria-label="Clique para ver a mensagem especial">💚</button>
+        <div class="message" id="message"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <audio id="startSound" src="zelda-open.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

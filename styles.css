@@ -1,0 +1,178 @@
+/* --- GERAL E BOAS PRÁTICAS --- */
+
+/* 1. Reset básico e fonte global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho final do elemento */
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+  background-color: #222; /* Cor de fundo caso a imagem falhe */
+  background-image: url('fundo-pixelado-zelda.jpg');
+  background-repeat: repeat;
+  background-size: 80px 80px;
+  background-attachment: fixed; /* Fundo não rola com o conteúdo */
+
+  /* Centraliza o container principal na tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem; /* Adiciona um respiro nas bordas da tela */
+}
+
+/* --- CLASSE DE CONTROLE --- */
+
+/* Classe para esconder elementos que aparecerão com JavaScript */
+.hidden {
+  display: none;
+}
+
+
+/* --- LAYOUT PRINCIPAL (Mobile First) --- */
+
+.content-container {
+  display: flex;
+  flex-direction: column; /* No celular: imagem em cima, caixa de texto embaixo */
+  width: 100%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.75); 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(127, 255, 127, 0.3); /* Borda sutil com a cor do tema */
+}
+
+.character-image {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem; /* Mais espaço interno */
+  gap: 1rem; /* Espaçamento entre todos os elementos filhos */
+}
+
+
+/* --- ESTILOS DOS COMPONENTES --- */
+
+h1 {
+  color: #7fff7f; /* Verde Zelda */
+  font-size: 1.2rem;
+  line-height: 1.4; /* Melhora a legibilidade */
+}
+
+.dialog-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+p.dialogo {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #7fff7f;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #fff;
+  width: 100%;
+  max-width: 400px; /* Limita a largura em telas maiores */
+  white-space: pre-wrap; /* Mantém as quebras de linha do JS */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.counter-container {
+  text-align: center;
+}
+
+.counter-label {
+  font-size: 0.6rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+#counter {
+  font-size: 0.8rem;
+  color: #ffe0f0; /* Rosa claro para o contador */
+}
+
+.final-message-container {
+  text-align: center;
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: #ffe0f0;
+  animation: fadeInScale 1s ease-in-out;
+}
+
+
+/* --- BOTÕES E ANIMAÇÕES --- */
+
+.start-button, .heart-button {
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.start-button {
+  background-color: #7fff7f;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.heart-button {
+  font-size: 2.5rem;
+  background: none; /* Remove o fundo padrão de botão */
+  border: none; /* Remove a borda padrão */
+  padding: 0;
+  animation: pulse 1.5s infinite;
+}
+
+.start-button:hover, .heart-button:hover {
+  transform: scale(1.1);
+}
+
+.start-button:hover {
+    background-color: #aaffaa;
+}
+
+
+/* Animações (mantidas do seu código original, pois são ótimas!) */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hidden{
+    display: none !important;
+}
